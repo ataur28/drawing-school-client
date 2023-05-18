@@ -30,36 +30,37 @@ const Blog = () => {
                 </div>
                 <h2 className='text-3xl font-bold text-center p-4'>Question and Answer </h2>
                 <div >
-                    <h3 className='font-bold'>Question-1: Tell us the differences between uncontrolled and controlled components?</h3>
+                    <h3 className='font-bold'>Question-1: What is an access token and refresh token? How do they work and where should we store them on the client-side?</h3>
                     <p>Answer:
-                        <li>Uncontrolled components are those that operate independently and can modify data or state without external regulation or constraints, potentially leading to unexpected behavior.</li>
-                        <li>Controlled components, on the other hand, are designed to operate within predefined boundaries and under the guidance of external constraints, ensuring predictable and consistent behavior.</li>
+                        An access token is a security credential that grants a client application permission to access protected resources on behalf of a user. It is typically short-lived and used for authentication and authorization purposes. A refresh token is a longer-lived token that is used to obtain new access tokens once the current one expires.
+
+                        Access tokens are usually stored on the client-side, either in memory or in a secure storage mechanism such as browser cookies or local storage. Refresh tokens, on the other hand, should be securely stored, preferably in a server-side session store or a secure cookie with the HttpOnly flag set to prevent client-side access.
+
+                        When an access token expires, the client can use the refresh token to request a new access token from the server without requiring the user to reauthenticate. This helps improve security by reducing the exposure of the access token and minimizing the risk of unauthorized access to protected resources.
 
                     </p>
                 </div>
                 <div >
-                    <h3 className='font-bold'>Question-2: How to validate React props using PropTypes?</h3>
-                    <p>Answer: To validate React props using PropTypes, import the PropTypes library from the  package, define a propTypes object with the expected data types for each prop, and assign it to the  static propTypes property.</p>
+                    <h3 className='font-bold'>Question-2: Compare SQL and NoSQL databases?</h3>
+                    <li>Data Model: SQL databases have structured schemas, while NoSQL databases have flexible data models.</li>
+                    <li>Scalability: SQL databases scale vertically, while NoSQL databases scale horizontally.</li>
+                    <li>Query Language: SQL databases use SQL, while NoSQL databases have their query languages or APIs.</li>
+                    <li>Flexibility: NoSQL databases are more flexible and agile in handling changing data structures.</li>
+                    <li>Use Cases: SQL databases are suited for structured data, while NoSQL databases excel with unstructured or rapidly changing data.</li>
                 </div>
                 <div >
-                    <h3 className='font-bold'>Question-3: Tell us the difference between nodejs and express js.?</h3>
+                    <h3 className='font-bold'>Question-3: What is express js? What is Nest JS?</h3>
                     <p>Answer:
-                        <li>Node.js is a runtime environment for executing JavaScript code outside of a web browser, while Express.js is a web application framework built on top of Node.js that simplifies the creation of web applications.</li>
-                        <li>Node.js provides a set of built-in modules and APIs for performing tasks such as file system operations, networking, and event handling, while Express.js provides additional abstractions and features for handling HTTP requests and responses, routing, middleware, and more.</li>
-                        <li>While Node.js can be used to create web servers and handle HTTP requests directly, using Express.js can simplify the process by providing a higher-level API and a more organized structure for building web applications.</li>
-                        <li>Express.js also provides a wide range of middleware modules that can be used to add additional functionality to a web application, such as handling authentication, parsing request bodies, and caching responses, among others.</li>
-
+                        <li>Express.js is a lightweight web application framework for Node.js that simplifies the process of building web applications and APIs. It provides a minimalistic set of tools and features for handling HTTP requests, defining routes, and managing middleware functions. It is known for its flexibility, scalability, and extensive ecosystem of plugins.</li>
+                        <li>Nest.js is a server-side framework for Node.js that utilizes TypeScript and draws inspiration from Angular. It offers a modular and extensible architecture, making it easy to build scalable and maintainable applications. It provides built-in support for routing, middleware, authentication, and database integration, promoting code reusability and following best practices. Nest.js is popular for building robust and enterprise-grade server-side applications.</li>
+                        
 
                     </p>
                 </div>
                 <div >
-                    <h3 className='font-bold'>Question-4: What is a custom hook, and why will you create a custom hook?</h3>
+                    <h3 className='font-bold'>Question-4: What is MongoDB aggregate and how does it work?</h3>
                     <p>Answer:
-                        A custom hook is a JavaScript function that uses built-in hooks and/or other custom hooks to provide a specific functionality that can be reused across multiple components in a React application.
-
-                        Creating a custom hook can help avoid code duplication and improve code organization by abstracting away complex logic into a single reusable hook.
-
-                        Custom hooks can also improve code readability and reduce complexity by separating concerns and making it easier to reason about the behavior of individual components.</p>
+                    In MongoDB, the aggregate function is used for performing advanced data processing and aggregation operations on collections. It processes data through a sequence of stages defined in an aggregation pipeline. Each stage applies a specific operation or transformation to the data and passes the results to the next stage. This allows for complex data manipulations, filtering, grouping, sorting, and joining of data within a single query. Aggregations are useful for generating reports, analyzing data, and extracting valuable insights from MongoDB collections.</p>
                 </div>
             </div>
             {/* <Button

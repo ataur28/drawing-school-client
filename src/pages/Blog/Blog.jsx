@@ -2,9 +2,11 @@
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { useState } from 'react';
+import useTitle from '../../hook/useTitle';
 
 const Blog = () => {
     const [loader, setLoader] = useState(false);
+    useTitle('Blog');
 
     const downloadPDF = () => {
         const capture = document.querySelector('.blog-page');

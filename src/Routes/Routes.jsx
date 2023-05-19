@@ -7,6 +7,8 @@ import ErrorElement from "../pages/ErrorElement/ErrorElement";
 import DollDetails from "../pages/Home/DollDetails/DollDetails";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import AddDoll from "../pages/AddDoll/AddDoll";
+import MyDolls from "../pages/MyDolls/MyDolls";
 
 
 const router = createBrowserRouter([
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
             {
                 path: '/signUp',
                 element: <SignUp></SignUp>,
+            },
+            {
+                path: '/addDoll',
+                element: <AddDoll></AddDoll>,
+            },
+            {
+                path: '/myDoll',
+                element: <MyDolls></MyDolls>,
             },
             {
                 path: '*',

@@ -8,6 +8,8 @@ const NavBar = () => {
         <li><Link to='/allDolls'>All Dolls</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
+        <li><Link to='/addDoll'>Add A Doll</Link></li>
+        <li><Link to='/myDoll'>My Doll</Link></li>
     </>
     return (
         <div className="navbar bg-base-100 h-24">

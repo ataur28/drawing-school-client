@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import {  useLoaderData, useParams } from "react-router-dom";
+import useTitle from "../../../hook/useTitle";
 
 
 const DollDetails = () => {
+    useTitle(' Doll Details');
     const { subDollsId } = useParams();
     // console.log(subDollsId);
     const [detail, setDetails] = useState(useLoaderData());
@@ -11,7 +13,7 @@ const DollDetails = () => {
     const doll = detail.find((doll) => doll._id == subDollsId)
     // console.log(doll);
 
-    const { picture, toyName, sellerName, sellerEmail, price, rating, quantity, details } = doll;
+    const { picture, toyName, sellerName, sellerEmail, price, rating, quantity, details, category } = doll;
 
     return (
         <div className="mb-10">
@@ -25,10 +27,11 @@ const DollDetails = () => {
                     <p>Price: ${price}</p>
                     <p>Rating: {rating}</p>
                     <p>Quantity: {quantity}</p>
+                    <p>Sub-category: {category}</p>
                     <p>Description: {details}</p>
-                    <div className="card-actions justify-end">
+                    {/* <div className="card-actions justify-end">
                         <Link to='/'><button className="btn btn-primary">Go to Home</button></Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

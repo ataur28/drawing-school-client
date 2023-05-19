@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import AllDollCategory from "../AllDollCategory/AllDollCategory";
+import useTitle from "../../hook/useTitle";
 
 
 const AllDolls = () => {
+    useTitle('All Dolls');
     const [dolls, setDolls] = useState([]);
 
     useEffect(() => {
@@ -12,17 +14,45 @@ const AllDolls = () => {
     }, [])
 
     return (
-        <div>
+        <div className="mb-10 mt-10">
             <h2>here all dolls number {dolls.length}</h2>
+            <div className="overflow-x-auto w-full mt-10">
+                <table className="table w-full">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            {/* <th>
+                                <label>
+                                    <input type="checkbox" className="checkbox" />
+                                </label>
+                            </th> */}
+                            <th>Seller Name</th>
+                            <th>Toy Name</th>
+                            <th>Sub-category</th>
+                            <th>Price</th>
+                            <th>Available Quantity</th>
+                            <th>Button</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-            <div>
-                {
-                    dolls?.map(subDolls => <AllDollCategory
-                        key={subDolls._id}
-                        subDolls={subDolls}
-                    ></AllDollCategory>)
-                }
+                        
+                            {
+                                dolls?.map(subDolls => <AllDollCategory
+                                    key={subDolls._id}
+                                    subDolls={subDolls}
+                                ></AllDollCategory>)
+                            }
+                        
+
+
+                    </tbody>
+
+
+                </table>
             </div>
+
+
         </div>
     );
 };

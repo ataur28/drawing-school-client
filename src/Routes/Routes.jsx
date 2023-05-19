@@ -6,6 +6,7 @@ import Blog from "../pages/Blog/Blog";
 import ErrorElement from "../pages/ErrorElement/ErrorElement";
 import DollDetails from "../pages/Home/DollDetails/DollDetails";
 import Login from "../pages/Login/Login";
+import SignUp from "../pages/SignUp/SignUp";
 
 
 const router = createBrowserRouter([
@@ -28,11 +29,15 @@ const router = createBrowserRouter([
             {
                 path: '/subDolls/:subDollsId',
                 element: <DollDetails></DollDetails>,
-                loader: ({ params }) => fetch('dolls.json')
+                loader: ({ params }) => fetch('http://localhost:5000/dolls')
             },
             {
                 path: '/login',
                 element: <Login></Login>,
+            },
+            {
+                path: '/signUp',
+                element: <SignUp></SignUp>,
             },
             {
                 path: '*',

@@ -8,7 +8,7 @@ const AllDolls = () => {
     const [dolls, setDolls] = useState([]);
 
     useEffect(() => {
-        fetch('dolls.json')
+        fetch('http://localhost:5000/dolls')
             .then(res => res.json())
             .then(data => setDolls(data))
     }, [])

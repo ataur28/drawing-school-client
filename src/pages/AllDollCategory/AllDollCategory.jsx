@@ -34,7 +34,7 @@ const AllDollCategory = ({ subDolls }) => {
                 {quantity}
             </td>
             <th>
-            <Link to={`/subDolls/${_id}`}><button className='btn btn-primary'>View Recipes</button></Link>
+            <Link to={`/subDolls/${_id}`}><button className='btn btn-primary'>View Details</button></Link>
             </th>
         </tr>
 

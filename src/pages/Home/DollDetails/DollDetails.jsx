@@ -17,7 +17,7 @@ const DollDetails = () => {
         <div className="mb-10">
             <h2 className="text-4xl font-bold mt-8 mb-8 text-center text-gray-600">Details</h2>
             <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={picture} alt="Movie" /></figure>
+                <figure><img className="ms-3" src={picture} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Name: {toyName}</h2>
                     <p>Seller Name: {sellerName}</p>

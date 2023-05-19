@@ -1,11 +1,21 @@
 
 
-const SubCategory = ({subDolls}) => {
+const SubCategory = ({ subDolls }) => {
     // console.log(subDolls);
-    const {picture, toyName, price, rating, category} = subDolls;
+    const { picture, toyName, price, rating } = subDolls;
     return (
         <div>
-            <h1>subbbbbbbbb {category}</h1>
+            <div className="card w-96 glass bg-slate-200 mb-4 mt-4">
+                <figure><img className="border-cyan-400 rounded-lg m-5 h-[300px] w-[300px]" src={picture} alt="car!" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">{toyName}</h2>
+                    <p className="text-left">Price: ${price}</p>
+                    <p className="text-left">Rating: {rating}</p>
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

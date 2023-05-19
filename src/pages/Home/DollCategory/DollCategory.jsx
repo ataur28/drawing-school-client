@@ -6,7 +6,7 @@ import SubCategory from '../SubCategory/SubCategory';
 const DollCategory = () => {
     const [dolls, setDolls] = useState([]);
     const [activeTab, setActiveTab] = useState("baby");
-    
+
 
     useEffect(() => {
         fetch('dolls.json')
@@ -19,12 +19,12 @@ const DollCategory = () => {
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
-      };
+    };
     return (
         <div className='mt-10 mb-6'>
             <h2 className='text-4xl font-bold mb-8 text-center text-gray-600'>Doll Category</h2>
 
-            <p>dolls {dolls.length}</p>
+            <p className=' font-semibold mb-8 text-center text-gray-500'>High fashion themed dolls are included in this category.</p>
 
 
             {/* <div>
@@ -49,33 +49,34 @@ const DollCategory = () => {
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
-                    <div>
-                    {
-                        result?.map(subDolls => <SubCategory
-                        key={subDolls._id}
-                        subDolls={subDolls}
-                        ></SubCategory>)
-                    }
+                    <div className='lg:flex justify-between'>
+                        {
+                            result?.map(subDolls => <SubCategory
+                                key={subDolls._id}
+                                subDolls={subDolls}
+                            ></SubCategory>)
+                        }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
-                    {
-                        result?.map(subDolls => <SubCategory
-                        key={subDolls._id}
-                        subDolls={subDolls}
-                        ></SubCategory>)
-                    }
+                    <div className='lg:flex justify-between'>
+                        {
+                            result?.map(subDolls => <SubCategory
+                                key={subDolls._id}
+                                subDolls={subDolls}
+                            ></SubCategory>)
+                        }
+                    </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 3</h2>
-                    {
-                        result?.map(subDolls => <SubCategory
-                        key={subDolls._id}
-                        subDolls={subDolls}
-                        ></SubCategory>)
-                    }
+                    <div className='lg:flex justify-between'>
+                        {
+                            result?.map(subDolls => <SubCategory
+                                key={subDolls._id}
+                                subDolls={subDolls}
+                            ></SubCategory>)
+                        }
+                    </div>
                 </TabPanel>
             </Tabs>
         </div>

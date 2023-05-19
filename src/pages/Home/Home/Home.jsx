@@ -1,5 +1,6 @@
 import useTitle from "../../../hook/useTitle";
 import Banner from "../Banner/Banner";
+import DollCategory from "../DollCategory/DollCategory";
 import DollCloth from "../DollCloth/DollCloth";
 import UserReview from "../UserReview/UserReview";
 
@@ -8,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h2>this is home</h2>
+            <DollCategory></DollCategory>
             <DollCloth></DollCloth>
             <UserReview></UserReview>
         </div>

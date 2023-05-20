@@ -50,7 +50,7 @@ const Login = () => {
                 console.log(LoggedInUser)
                 // navigate(from, { replace: true })
                 setUser(LoggedInUser);
-                alert("User login successfully")
+                alert("User login successful")
             })
             .catch(error => {
                 console.log('error', error.message)

@@ -58,8 +58,9 @@ const router = createBrowserRouter([
                 element: <AllMyDolls></AllMyDolls>,
             },
             {
-                path: '/updateDollData',
+                path: '/updateDollData/:id',
                 element: <UpdateDollData></UpdateDollData>,
+                loader: ({ params }) => fetch(`http://localhost:5000/dolls/${params.id}`)
             },
             {
                 path: '*',

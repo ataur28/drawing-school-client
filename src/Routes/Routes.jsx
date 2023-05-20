@@ -11,6 +11,7 @@ import AddDoll from "../pages/AddDoll/AddDoll";
 import MyDolls from "../pages/MyDolls/MyDolls";
 import AllMyDolls from "../pages/AllMyDolls/AllMyDolls";
 import PrivateRoute from "./PrivateRoute";
+import UpdateDollData from "../pages/UpdateDollData/updateDollData";
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: '/allMyDolls',
                 element: <AllMyDolls></AllMyDolls>,
+            },
+            {
+                path: '/updateDollData',
+                element: <UpdateDollData></UpdateDollData>,
             },
             {
                 path: '*',

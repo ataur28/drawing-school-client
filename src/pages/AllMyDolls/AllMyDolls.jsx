@@ -1,10 +1,9 @@
 
 
-const AllMyDolls = ({ myDolls }) => {
-    const { _id, picture, toyName, price, quantity, details } = myDolls;
+const AllMyDolls = ({ myDolls, handleDelete }) => {
+    const { _id, picture, toyName,category, price, quantity, details } = myDolls;
+
     return (
-
-
         <tr>
 
             <td>
@@ -21,13 +20,14 @@ const AllMyDolls = ({ myDolls }) => {
                     </div>
                 </div>
             </td>
+            <td>{category}</td>
             <td>
                 ${price}
             </td>
             <td>{quantity}</td>
             <td>{details}</td>
             <th>
-                <button className="btn btn-warning btn-xs">DELETE</button>
+                <button onClick={() => handleDelete(_id)} className="btn btn-warning btn-xs">DELETE</button>
             </th>
             <th>
                 <button className="btn btn-secondary btn-xs">UPDATE</button>

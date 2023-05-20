@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import AllMyDolls from "../AllMyDolls/AllMyDolls";
+import useTitle from "../../hook/useTitle";
 
 
 const MyDolls = () => {
+    useTitle('My Dolls');
     const { user } = useContext(AuthContext);
     const emails = user?.email
     // console.log(emails)

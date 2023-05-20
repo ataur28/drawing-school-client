@@ -4,8 +4,10 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../firebase/firebase.config";
+import useTitle from "../../hook/useTitle";
 
 const Login = () => {
+    useTitle('Login');
 
     const {signIn} = useContext(AuthContext)
 

@@ -2,7 +2,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import useTitle from "../../hook/useTitle";
 const SignUp = () => {
+    useTitle('SignUp');
 
     const {createUser} = useContext(AuthContext);
 
@@ -30,7 +32,7 @@ const SignUp = () => {
     }
     return (
         <div>
-            <h2>SignUp Page</h2>
+            
             <div className="hero min-h-[700px] bg-base-100">
                 {/* <div className="hero-content flex-col lg:flex-row-reverse"> */}
 

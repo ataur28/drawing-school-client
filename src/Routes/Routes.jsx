@@ -9,6 +9,8 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import AddDoll from "../pages/AddDoll/AddDoll";
 import MyDolls from "../pages/MyDolls/MyDolls";
+import AllMyDolls from "../pages/AllMyDolls/AllMyDolls";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allDolls',
-                element: <AllDolls></AllDolls>,
+                element: <PrivateRoute><AllDolls></AllDolls></PrivateRoute>,
             },
             {
                 path: '/blog',
@@ -43,11 +45,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addDoll',
-                element: <AddDoll></AddDoll>,
+                element: <PrivateRoute><AddDoll></AddDoll></PrivateRoute>,
             },
             {
                 path: '/myDoll',
-                element: <MyDolls></MyDolls>,
+                element: <PrivateRoute><MyDolls></MyDolls></PrivateRoute>,
+                // loader: ({ params }) => fetch('http://localhost:5000/dolls')
+            },
+            {
+                path: '/allMyDolls',
+                element: <AllMyDolls></AllMyDolls>,
             },
             {
                 path: '*',

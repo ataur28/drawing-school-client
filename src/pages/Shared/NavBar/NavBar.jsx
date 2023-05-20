@@ -5,23 +5,27 @@ import { AuthContext } from "../../../provider/AuthProvider";
 
 
 const NavBar = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
 
-    const handleLogOut =() =>{
+    const handleLogOut = () => {
         logOut()
-        .then(() => {})
-        .catch(error => console.log(error))
+            .then(() => { })
+            .catch(error => console.log(error))
     }
 
     const navItems = <>
-        <li><Link to ='/'>Home</Link></li>
+        <li><Link to='/'>Home</Link></li>
         <li><Link to='/allDolls'>All Dolls</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
-        <li><Link to='/addDoll'>Add A Doll</Link></li>
-        <li><Link to='/myDoll'>My Doll</Link></li>
-        {user?.email? <li><button onClick={handleLogOut}>LogOut</button></li> : <li><Link to='/login'>Login</Link></li>
+        {/* <li><Link to='/addDoll'>Add A Doll</Link></li>
+        <li><Link to='/myDoll'>My Doll</Link></li> */}
+        {user?.email ? <>
+            <li><Link to='/addDoll'>Add A Doll</Link></li>
+            <li><Link to='/myDoll'>My Doll</Link></li>
+            <li><button onClick={handleLogOut}>LogOut</button></li>
+        </> : <li><Link to='/login'>Login</Link></li>
         }
     </>
     return (
@@ -45,7 +49,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <button className="btn btn-accent">Button</button>
+                <button className="btn btn-accent">Button</button>
             </div>
         </div>
     );

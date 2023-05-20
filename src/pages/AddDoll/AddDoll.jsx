@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 
 const AddDoll = () => {
+
+    const { user } = useContext(AuthContext);
+    const emails = user?.email
 
     const handleAddDoll = event => {
         event.preventDefault();
@@ -57,7 +62,8 @@ const AddDoll = () => {
                         <label className="label">
                             <span className="label-text">Seller Email</span>
                         </label>
-                        <input type="email" name="sellerEmail" placeholder="seller email" className="input input-bordered" />
+                        <input type="email" name="sellerEmail"
+                        defaultValue={emails} placeholder="seller email" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">

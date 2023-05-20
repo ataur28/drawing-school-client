@@ -1,11 +1,42 @@
 
 
 const AddDoll = () => {
+
+    const handleAddDoll = event => {
+        event.preventDefault();
+        const form = event.target;
+        const toyName = form.toyName.value;
+        const sellerName = form.sellerName.value;
+        const sellerEmail = form.sellerEmail.value;
+        const category = form.category.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value;
+        const details = form.details.value;
+        const picture = form.picture.value;
+        const doll = {toyName, sellerName, sellerEmail, category, price, rating, quantity, details, picture}
+        console.log(doll);
+
+        fetch('http://localhost:5000/dolls',{
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(doll)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+
+    }
+
+
     return (
 
         <div>
             <h2 className="text-4xl font-bold pt-8 pb-8 text-center text-gray-600">Add A Doll</h2>
-            <form >
+            <form onSubmit={handleAddDoll} >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="form-control">
                         <label className="label">
@@ -68,11 +99,12 @@ const AddDoll = () => {
                     </label>
                     <input type="text" name="picture" placeholder="picture URL of the toy" className="input input-bordered" />
                 </div>
+                <div className="form-control mt-6">
+                    <button className="btn btn-primary mb-6" type="submit">Add A Doll</button>
+                </div>
             </form>
 
-            <div className="form-control mt-6">
-                <button className="btn btn-primary mb-6" type="submit">Add A Doll</button>
-            </div>
+
         </div>
 
     );

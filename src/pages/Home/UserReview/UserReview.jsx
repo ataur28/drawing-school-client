@@ -7,7 +7,7 @@ const UserReview = () => {
     return (
         <div>
             <h2 className="text-4xl font-bold pt-8 text-center text-gray-600">User Review</h2>
-            <div className='lg:flex justify-between '>
+            <div className='grid grid-cols-1 lg:grid-cols-3 '>
                 <div className="card w-96 bg-base-100 shadow-xl mb-4">
                     <figure className="px-10 pt-10">
                         <img  src={user1} alt="Shoes" className="rounded-xl h-60" />

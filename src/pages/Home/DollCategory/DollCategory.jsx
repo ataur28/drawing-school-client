@@ -49,7 +49,7 @@ const DollCategory = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='lg:flex justify-between'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3'>
                         {
                             result?.map(subDolls => <SubCategory
                                 key={subDolls._id}
@@ -59,7 +59,7 @@ const DollCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='lg:flex justify-between'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3'>
                         {
                             result?.map(subDolls => <SubCategory
                                 key={subDolls._id}
@@ -69,7 +69,7 @@ const DollCategory = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='lg:flex justify-between'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3'>
                         {
                             result?.map(subDolls => <SubCategory
                                 key={subDolls._id}

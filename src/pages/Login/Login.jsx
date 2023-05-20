@@ -33,8 +33,8 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                // setSuccess('User has been created successfully');
-                alert("User login successfully")
+                
+                alert("User login successful")
                 navigate(from, { replace: true })
                 // Navigate(from, { replace: true })
             })
@@ -50,9 +50,10 @@ const Login = () => {
             .then(result => {
                 const LoggedInUser = result.user;
                 console.log(LoggedInUser)
-                // navigate(from, { replace: true })
+                navigate(from, { replace: true })
                 setUser(LoggedInUser);
                 alert("User login successful")
+                
             })
             .catch(error => {
                 console.log('error', error.message)
@@ -62,7 +63,7 @@ const Login = () => {
     return (
         <div>
             <div className="hero min-h-[600px] bg-base-100">
-                {/* <div className="hero-content flex-col lg:flex-row-reverse"> */}
+                
 
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">

@@ -8,7 +8,7 @@ const AllDolls = () => {
     const [dolls, setDolls] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/dolls')
+        fetch('https://doll-house-server.vercel.app/dolls')
             .then(res => res.json())
             .then(data => setDolls(data))
     }, [])

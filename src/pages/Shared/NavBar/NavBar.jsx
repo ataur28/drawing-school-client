@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/Dollhouse_Logo.jpg'
+import { useContext } from "react";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 
 const NavBar = () => {
+    const {user, logOut} = useContext(AuthContext);
+
+
+    const handleLogOut =() =>{
+        logOut()
+        .then(() => {})
+        .catch(error => console.log(error))
+    }
+
     const navItems = <>
         <li><Link to ='/'>Home</Link></li>
         <li><Link to='/allDolls'>All Dolls</Link></li>
@@ -10,6 +21,8 @@ const NavBar = () => {
         <li><Link to='/blog'>Blog</Link></li>
         <li><Link to='/addDoll'>Add A Doll</Link></li>
         <li><Link to='/myDoll'>My Doll</Link></li>
+        {user?.email? <li><button onClick={handleLogOut}>LogOut</button></li> : <li><Link to='/login'>Login</Link></li>
+        }
     </>
     return (
         <div className="navbar bg-base-100 h-24">

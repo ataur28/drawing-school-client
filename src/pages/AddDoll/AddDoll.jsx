@@ -26,7 +26,10 @@ const AddDoll = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
+            if(data.insertedId){
+                alert('Add A Doll Successfully')
+            }
         })
 
     }

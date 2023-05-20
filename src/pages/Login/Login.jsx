@@ -11,8 +11,14 @@ const Login = () => {
 
     const [user, setUser] = useState(null);
     const auth = getAuth(app);
-    // console.log(app)
+    //  console.log(app)
     const provider = new GoogleAuthProvider();
+
+    
+    const navigate = useNavigate();
+    const location = useLocation();
+    // console.log('login page location', location)
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event =>{
         event.preventDefault();
@@ -27,7 +33,7 @@ const Login = () => {
                 console.log(loggedUser);
                 // setSuccess('User has been created successfully');
                 alert("User login successfully")
-                // navigate(from, { replace: true })
+                navigate(from, { replace: true })
                 // Navigate(from, { replace: true })
             })
             .catch(error => {
@@ -44,6 +50,7 @@ const Login = () => {
                 console.log(LoggedInUser)
                 // navigate(from, { replace: true })
                 setUser(LoggedInUser);
+                alert("User login successfully")
             })
             .catch(error => {
                 console.log('error', error.message)
@@ -52,7 +59,6 @@ const Login = () => {
 
     return (
         <div>
-            <h2>login page</h2>
             <div className="hero min-h-[600px] bg-base-100">
                 {/* <div className="hero-content flex-col lg:flex-row-reverse"> */}
 
@@ -72,7 +78,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" 
+                                <input type="password" 
                                 name="password"
                                 placeholder="password" className="input input-bordered" />
                                 <label className="label">

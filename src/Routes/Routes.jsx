@@ -25,7 +25,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allDolls',
-                element: <PrivateRoute><AllDolls></AllDolls></PrivateRoute>,
+                element: <AllDolls></AllDolls>,
             },
             {
                 path: '/blog',
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/subDolls/:subDollsId',
-                element: <DollDetails></DollDetails>,
+                element: <PrivateRoute><DollDetails></DollDetails></PrivateRoute>,
                 loader: ({ params }) => fetch('http://localhost:5000/dolls')
             },
             {

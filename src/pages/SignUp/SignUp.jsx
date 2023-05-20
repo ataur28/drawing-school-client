@@ -19,6 +19,7 @@ const SignUp = () => {
             .then(result => {
                 const createdUser = result.user;
                 // setSuccess('User Register successfully');
+                // navigate(from, { replace: true })
                 alert("User Register successfully")
                 console.log(createdUser);
             })
@@ -57,7 +58,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" 
+                                <input type="password" 
                                 name="password"
                                 placeholder="password" className="input input-bordered" />
                                 {/* <label className="label">

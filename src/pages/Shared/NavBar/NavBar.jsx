@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import logo from '../../../assets/Dollhouse_Logo.jpg'
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
+import './NavBar.css'
 
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+    // console.log(user.photoURL)
 
 
     const handleLogOut = () => {
@@ -49,7 +51,17 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-accent">Button</button>
+                {/* <button className="btn btn-accent">Button</button> */}
+
+                {user && <div className='container'>
+                        <img className="h-14 w-14 rounded-full" src={user.photoURL} alt="" /> 
+                        <div className="overlay">
+                            <div className="text">{user.displayName}</div>
+                        </div>
+                    </div>}
+
+                   {/* <img className="h-14 w-14 rounded-full" src={user.photoURL} alt="" />  */}
+
             </div>
         </div>
     );

@@ -15,7 +15,14 @@ const AllDolls = () => {
 
     return (
         <div className="mb-10 mt-10">
-            <h2>here all dolls number {dolls.length}</h2>
+
+            <form>
+                <div className="flex justify-center items-center">
+                    <input type="text" name="search" placeholder="search" className="input input-bordered" />
+                    <button className="btn btn-secondary">Search</button>
+                </div>
+            </form>
+
             <div className="overflow-x-auto w-full mt-10">
                 <table className="table w-full">
                     {/* head */}
@@ -36,14 +43,14 @@ const AllDolls = () => {
                     </thead>
                     <tbody>
 
-                        
-                            {
-                                dolls?.map(subDolls => <AllDollCategory
-                                    key={subDolls._id}
-                                    subDolls={subDolls}
-                                ></AllDollCategory>)
-                            }
-                        
+
+                        {
+                            dolls?.map(subDolls => <AllDollCategory
+                                key={subDolls._id}
+                                subDolls={subDolls}
+                            ></AllDollCategory>)
+                        }
+
 
 
                     </tbody>

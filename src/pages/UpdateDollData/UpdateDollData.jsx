@@ -21,7 +21,7 @@ const UpdateDollData = () => {
         const doll = { toyName,  price,  quantity, details, picture }
         console.log(doll);
 
-        fetch(`http://localhost:5000/dolls/${loadedDoll._id}`, {
+        fetch(`https://doll-house-server.vercel.app/${loadedDoll._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

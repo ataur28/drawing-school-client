@@ -30,7 +30,7 @@ const MyDolls = () => {
         // console.log(id);
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`https://doll-house-server.vercel.app/${id}`,{
+            fetch(`https://doll-house-server.vercel.app/dolls/${id}`,{
                 method: 'DELETE'
             })
                 .then(res => res.json())

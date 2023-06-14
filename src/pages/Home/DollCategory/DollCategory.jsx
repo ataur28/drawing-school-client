@@ -9,7 +9,7 @@ const DollCategory = () => {
 
 
     useEffect(() => {
-        fetch('https://doll-house-server.vercel.app/dolls')
+        fetch('http://localhost:5000/dolls')
             .then(res => res.json())
             .then(data => setDolls(data))
     }, [])

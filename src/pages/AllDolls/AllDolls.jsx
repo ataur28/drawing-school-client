@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import AllDollCategory from "../AllDollCategory/AllDollCategory";
 import useTitle from "../../hook/useTitle";
-
+// http://localhost:5000
 
 const AllDolls = () => {
     useTitle('All Dolls');
     const [dolls, setDolls] = useState([]);
 
     useEffect(() => {
-        fetch('https://doll-house-server.vercel.app/dolls')
+        fetch('http://localhost:5000/dolls')
             .then(res => res.json())
             .then(data => setDolls(data))
     }, [])

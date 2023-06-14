@@ -18,7 +18,7 @@ const NavBar = () => {
 
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/allDolls'>All Dolls</Link></li>
+        <li><Link to='/allDolls'>All Classes</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
         {/* <li><Link to='/addDoll'>Add A Doll</Link></li>

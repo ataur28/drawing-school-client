@@ -33,11 +33,11 @@ const AllDolls = () => {
                                     <input type="checkbox" className="checkbox" />
                                 </label>
                             </th> */}
-                            <th>Seller Name</th>
-                            <th>Toy Name</th>
-                            <th>Sub-category</th>
+                            <th>Class Image</th>
+                            <th>Class Name</th>
+                            <th>Instructor Name</th>
+                            <th>Available Seats</th>
                             <th>Price</th>
-                            <th>Available Quantity</th>
                             <th>Button</th>
                         </tr>
                     </thead>

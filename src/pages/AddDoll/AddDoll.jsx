@@ -24,7 +24,7 @@ const AddDoll = () => {
         const doll = {toyName, sellerName, sellerEmail, category, price, rating, quantity, details, picture}
         console.log(doll);
 
-        fetch('http://localhost:5000/dolls',{
+        fetch('http://localhost:5000//dolls',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

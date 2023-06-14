@@ -5,7 +5,7 @@ import useTitle from "../../hook/useTitle";
 
 
 const MyDolls = () => {
-    useTitle('My Dolls');
+    useTitle('My classes');
     const { user } = useContext(AuthContext);
     const emails = user?.email
     // console.log(emails)
@@ -23,14 +23,14 @@ const MyDolls = () => {
 
     // console.log(dolls)
 
-    const result = dolls.filter((doll) => doll.sellerEmail == emails);
+    const result = dolls.filter((doll) => doll.instructorEmail == emails);
     // console.log(result)
 
     const handleDelete = id => {
         // console.log(id);
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000//dolls/${id}`,{
+            fetch(`http://localhost:5000/dolls/${id}`,{
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -47,17 +47,17 @@ const MyDolls = () => {
 
     return (
         <div>
-            <h2 className="text-4xl font-bold pt-8 pb-8 text-center text-gray-600">My Dolls</h2>
+            <h2 className="text-4xl font-bold pt-8 pb-8 text-center text-gray-600">My Classes</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>Doll Picture and Name</th>
-                            <th>Sub-category</th>
+                            <th>Class Image</th>
+                            <th>Class Name</th>
+                            <th>Instructor Name</th>
+                            <th>Available Seats</th>
                             <th>Price</th>
-                            <th>Available Quantity</th>
-                            <th>Detail Description</th>
                             <th>Delete Button</th>
                             <th>Update Button</th>
                         </tr>

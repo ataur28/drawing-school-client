@@ -9,16 +9,15 @@ const UpdateDollData = () => {
     const handleUpdate = event => {
         event.preventDefault();
         const form = event.target;
-        const toyName = form.toyName.value;
+        const classPicture = form.classPicture.value;
         // const sellerName = form.sellerName.value;
         // const sellerEmail = form.sellerEmail.value;
         // const category = form.category.value;
+        const className = form.className.value;
+        const instructorName = form.instructorName.value;
+        const availableSeats = form.availableSeats.value;
         const price = form.price.value;
-        // const rating = form.rating.value;
-        const quantity = form.quantity.value;
-        const details = form.details.value;
-        const picture = form.picture.value;
-        const doll = { toyName,  price,  quantity, details, picture }
+        const doll = {classPicture, className, instructorName,availableSeats, price}
         console.log(doll);
 
         fetch(`http://localhost:5000/dollsDetails/${loadedDoll._id}`, {
@@ -39,62 +38,46 @@ const UpdateDollData = () => {
     }
     return (
         <div>
-            {/* <h2>update information of {loadedDoll.toyName}</h2> */}
-            <h2 className="text-4xl font-bold pt-8 pb-8 text-center text-gray-600">Update Doll Data</h2>
+            <h2 className="text-4xl font-bold pt-8 pb-8 text-center text-gray-600">Update Class Data</h2>
             <form onSubmit={handleUpdate} >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Doll Name</span>
+                            <span className="label-text">Class Name</span>
                         </label>
-                        <input type="text" name="toyName" 
-                        defaultValue={loadedDoll?.toyName}
-                        placeholder="doll name" className="input input-bordered" />
+                        <input type="text" name="className" 
+                        defaultValue={loadedDoll?.className} placeholder="class name" className="input input-bordered" />
                     </div>
-                    {/* <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Seller Name</span>
-                        </label>
-                        <input type="text" name="sellerName"
-                        defaultValue={loadedDoll?.sellerName} placeholder="seller name" className="input input-bordered" />
-                    </div> */}
-                    {/* <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Seller Email</span>
-                        </label>
-                        <input type="email" name="sellerEmail"
-                            defaultValue={emails} placeholder="seller email" className="input input-bordered" />
-                    </div> */}
                     
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Instructor Name</span>
+                        </label>
+                        <input type="text" name="instructorName" 
+                        defaultValue={loadedDoll?.instructorName} placeholder="instructor name" className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Available Seats</span>
+                        </label>
+                        <input type="text" name="availableSeats"
+                        defaultValue={loadedDoll?.availableSeats}  placeholder="available seats " className="input input-bordered" />
+                    </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="text" name="price" 
-                        defaultValue={loadedDoll?.price} placeholder="price" className="input input-bordered" />
-                    </div>
-                    
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Available Quantity</span>
-                        </label>
-                        <input type="text" name="quantity" 
-                        defaultValue={loadedDoll?.quantity} placeholder="available quantity" className="input input-bordered" />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Detail description</span>
-                        </label>
-                        <input type="text" name="details"
-                        defaultValue={loadedDoll?.details}  placeholder="detail " className="input input-bordered" />
+                        <input type="text" name="price"
+                        defaultValue={loadedDoll?.price}  placeholder="price " className="input input-bordered" />
                     </div>
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Picture UR</span>
+                        <span className="label-text">Class Picture URL</span>
                     </label>
-                    <input type="text" name="picture" 
-                    defaultValue={loadedDoll?.picture} placeholder="picture URL of the toy" className="input input-bordered" />
+                    <input type="text" name="classPicture" 
+                    defaultValue={loadedDoll?.classPicture} placeholder="class picture  url" className="input input-bordered" />
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn btn-primary mb-6" type="submit">Confirmed Update</button>

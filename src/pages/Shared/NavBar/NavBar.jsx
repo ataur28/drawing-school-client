@@ -24,7 +24,7 @@ const NavBar = () => {
         {/* <li><Link to='/addDoll'>Add A Doll</Link></li>
         <li><Link to='/myDoll'>My Doll</Link></li> */}
         {user?.email ? <>
-            <li><Link to='/addDoll'>Add A Doll</Link></li>
+            <li><Link to='/addDoll'>Add A Class</Link></li>
             <li><Link to='/myDoll'>My Doll</Link></li>
             <li><button onClick={handleLogOut}>LogOut</button></li>
         </> : <li><Link to='/login'>Login</Link></li>

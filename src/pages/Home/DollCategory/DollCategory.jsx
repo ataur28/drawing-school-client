@@ -22,9 +22,9 @@ const DollCategory = () => {
     };
     return (
         <div className='mt-10 mb-6'>
-            <h2 className='text-4xl font-bold mb-8 text-center text-gray-600'>Doll Category</h2>
+            <h2 className='text-4xl font-bold mb-8 text-center text-gray-600'>Popular Instructors</h2>
 
-            <p className=' font-semibold mb-8 text-center text-gray-500'>High fashion themed dolls are included in this category.</p>
+            <p className=' font-semibold mb-8 text-center text-gray-500'>The instructor is great, explains the material clearly, with plenty of examples and practice..</p>
 
 
             {/* <div>
@@ -40,9 +40,9 @@ const DollCategory = () => {
             <Tabs className="text-center">
 
                 <TabList>
-                    <Tab onClick={() => handleTabClick("baby")}>Bady Dolls</Tab>
-                    <Tab onClick={() => handleTabClick("barbie")}>Barbie Dolls</Tab>
-                    <Tab onClick={() => handleTabClick("american")}>American Dolls</Tab>
+                    <Tab onClick={() => handleTabClick("baby")}>Instructors</Tab>
+                    {/* <Tab onClick={() => handleTabClick("barbie")}>Barbie Dolls</Tab>
+                    <Tab onClick={() => handleTabClick("american")}>American Dolls</Tab> */}
                     {/* <Tab >Bady Dolls</Tab> */}
                     {/* <Tab >Barbie Dolls</Tab>
                     <Tab >American Dolls</Tab> */}
@@ -58,7 +58,7 @@ const DollCategory = () => {
                         }
                     </div>
                 </TabPanel>
-                <TabPanel>
+                {/* <TabPanel>
                     <div className='grid grid-cols-1 lg:grid-cols-3'>
                         {
                             result?.map(subDolls => <SubCategory
@@ -77,7 +77,7 @@ const DollCategory = () => {
                             ></SubCategory>)
                         }
                     </div>
-                </TabPanel>
+                </TabPanel> */}
             </Tabs>
         </div>
     );

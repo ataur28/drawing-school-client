@@ -1,5 +1,5 @@
 
-import logo from '../../../assets/Dollhouse_Logo.jpg'
+import logo from '../../../assets/logo.png'
 import facebook from '../../../assets/footerIcon/facebookIcon.png'
 import instagram from '../../../assets/footerIcon/instaramIcon.jpg'
 import twitter from '../../../assets/footerIcon/twitterIcon.jpg'
@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
             <div>
-                <img className="w-48 rounded-2xl bg-slate-300 p-2" src={logo} alt="" />
+                <img className="w-48 rounded-lg bg-slate-300 p-2" src={logo} alt="" />
                 <p>Chirkut Industries Ltd.<br />Providing reliable tech since 1992</p>
                 <div className="card-actions">
                     <img className='h-7 w-7' src={facebook} alt="" />

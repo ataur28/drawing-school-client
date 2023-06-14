@@ -1,110 +1,121 @@
 [
     {
-        "_id": "646712535dca1a328c5ce7df",
-        "picture": "https://i.ibb.co/HVvsf5B/doll6.jpg",
-        "toyName": "Nina",
-        "sellerName": "Valentine Juarez",
-        "sellerEmail": "valentinejuarez@digial.com",
-        "category": "baby",
-        "price": "170.55",
-        "rating": "4.33",
-        "quantity": "4",
-        "details": "Doll making involves designing, constructing, adding features and details, assembling, and adding finishing touches to create a unique doll.\r\n"
+      "_id": "648994d4b22ec994889fb735",
+      "instructorPicture": "https://i.ibb.co/TcgpLfv/teacher1.jpg",
+      "instructorName": "Clay Blevins",
+      "instructorEmail": "clayblevins@fiberox.com",
+      "classPicture": "https://i.ibb.co/cXjTHVm/class1.jpg",
+      "className": "Art Attack",
+      "availableSeats": "43",
+      "price": "249"
     },
     {
-        "_id": "646712536a696dc379d62735",
-        "picture": "https://i.ibb.co/fd2d0xR/doll5.jpg",
-        "toyName": "Vilma",
-        "sellerName": "Quinn Little",
-        "sellerEmail": "quinnlittle@digial.com",
-        "category": "baby",
-        "price": "253.55",
-        "rating": "3.53",
-        "quantity": "6",
-        "details": "Doll making involves designing, constructing, and adding details to create a unique doll using materials such as fabric, clay, porcelain, or vinyl.\r\n"
+      "_id": "648994d4da29563177c7e15b",
+      "instructorPicture": "https://i.ibb.co/sgbwk33/teacher2.jpg",
+      "instructorName": "Malone Landry",
+      "instructorEmail": "malonelandry@fiberox.com",
+      "classPicture": "https://i.ibb.co/gmXW9Qd/class2.jpg",
+      "className": "Color Me Happy",
+      "availableSeats": "42",
+      "price": "246"
     },
     {
-        "_id": "64671253c88207d6e4bd5477",
-        "picture": "https://i.ibb.co/pztM8LW/doll4.jpg",
-        "toyName": "Eddie Riley",
-        "sellerName": "Bella",
-        "sellerEmail": "hancockmeyers@digial.com",
-        "category": "baby",
-        "price": "150.55",
-        "rating": "4.60",
-        "quantity": "2",
-        "details": "Doll making involves designing, constructing, and adding details to create a unique doll using materials such as fabric, clay, porcelain, or vinyl.\r\n"
+      "_id": "648994d4bc340df3bb5727e6",
+      "instructorPicture": "https://i.ibb.co/JrwhCyh/teacher4.jpg",
+      "instructorName": "Marietta Spears",
+      "instructorEmail": "mariettaspears@fiberox.com",
+      "classPicture": "https://i.ibb.co/rdNrrDQ/class3.jpg",
+      "className": "The Fine Line",
+      "availableSeats": "44",
+      "price": "235"
     },
     {
-        "_id": "64671253d74c70d857d41012",
-        "picture": "https://i.ibb.co/fSTqjYx/bdoll3.jpg",
-        "toyName": "Maddox",
-        "sellerName": "Nanette Gibson",
-        "sellerEmail": "nanettegibson@digial.com",
-        "category": "barbie",
-        "price": "220.55",
-        "rating": "4.33",
-        "quantity": "8",
-        "details": "Doll making involves designing, constructing, adding features and details, assembling, and adding finishing touches to create a unique doll.\r\n"
+      "_id": "648994d4ae76bf419cd2b9df",
+      "instructorPicture": "https://i.ibb.co/b738cpZ/teacher5.jpg",
+      "instructorName": "Shelton Branch",
+      "instructorEmail": "sheltonbranch@fiberox.com",
+      "classPicture": "https://i.ibb.co/FwV8bYp/class4.jpg",
+      "className": "The Artful Touch",
+      "availableSeats": "48",
+      "price": "254"
     },
     {
-        "_id": "64671253b6d906f3022ae360",
-        "picture": "https://i.ibb.co/K7g5bzs/bdoll2.jpg",
-        "toyName": "Terra",
-        "sellerName": "Miriam Wilkerson",
-        "sellerEmail": "miriamwilkerson@digial.com",
-        "category": "barbie",
-        "price": "153.55",
-        "rating": "4.23",
-        "quantity": "4",
-        "details": "Doll making involves designing, constructing, and adding details to create a unique doll using materials such as fabric, clay, porcelain, or vinyl.\r\n"
+      "_id": "648994d4124a356806d3e7cb",
+      "instructorPicture": "https://i.ibb.co/C6sgYrr/tracher7.jpg",
+      "instructorName": "Franklin Beasley",
+      "instructorEmail": "franklinbeasley@fiberox.com",
+      "classPicture": "https://i.ibb.co/xFkrLkz/class5.jpg",
+      "className": "Fill Your Canvas",
+      "availableSeats": "46",
+      "price": "288"
     },
     {
-        "_id": "64671253949dcec0131e1794",
-        "picture": "https://i.ibb.co/s6wF1mX/bdoll1.jpg",
-        "toyName": "Melisa",
-        "sellerName": "Hilda Snider",
-        "sellerEmail": "hildasnider@digial.com",
-        "category": "barbie",
-        "price": "260.55",
-        "rating": "4.53",
-        "quantity": "5",
-        "details": "Doll making involves designing, constructing, and adding details to create a unique doll using materials such as fabric, clay, porcelain, or vinyl.\r\n"
-    },
-    {
-        "_id": "646712536720805592e91b5e",
-        "picture": "https://i.ibb.co/ryQfDvN/adoll3.jpg",
-        "toyName": "Carney",
-        "sellerName": "Watkins Mclean",
-        "sellerEmail": "watkinsmclean@digial.com",
-        "category": "american",
-        "price": "273.55",
-        "rating": "4.33",
-        "quantity": "3",
-        "details": "Doll making involves designing, constructing, adding features and details, assembling, and adding finishing touches to create a unique doll.\r\n"
-    },
-    {
-        "_id": "64671253a8bd997d79a620f0",
-        "picture": "https://i.ibb.co/Jqjh9p3/adoll2.jpg",
-        "toyName": "Potts",
-        "sellerName": "Adela Hoover",
-        "sellerEmail": "adelahoover@digial.com",
-        "category": "american",
-        "price": "173.55",
-        "rating": "4.43",
-        "quantity": "3",
-        "details": "Doll making involves designing, constructing, and adding details to create a unique doll using materials such as fabric, clay, porcelain, or vinyl.\r\n"
-    },
-    {
-        "_id": "6467136ca3673654b3ab1481",
-        "picture": "https://i.ibb.co/mzwdzdN/adoll1.jpg",
-        "toyName": "Fran",
-        "sellerName": "Kline Glenn",
-        "sellerEmail": "klineglenn@digial.com",
-        "category": "american",
-        "price": "27.55",
-        "rating": "3.33",
-        "quantity": "7",
-        "details": "Doll making involves designing, constructing, adding features and details, assembling, and adding finishing touches to create a unique doll.\r\n"
+      "_id": "648994d487354dc60f92c803",
+      "instructorPicture": "https://i.ibb.co/LzrS4Yn/teacher8.jpg",
+      "instructorName": "Briana Snider",
+      "instructorEmail": "brianasnider@fiberox.com",
+      "classPicture": "https://i.ibb.co/zFnv5Mc/class6.jpg",
+      "className": " Artful Babe",
+      "availableSeats": "50",
+      "price": "232"
     }
-]
+
+  ]
+
+//   [
+//     {
+//       "instructorPicture": "https://i.ibb.co/TcgpLfv/teacher1.jpg",
+//       "instructorName": "Clay Blevins",
+//       "instructorEmail": "clayblevins@fiberox.com",
+//       "classPicture": "https://i.ibb.co/cXjTHVm/class1.jpg",
+//       "className": "Art Attack",
+//       "availableSeats": "43",
+//       "price": "249"
+//     },
+//     {
+//       "instructorPicture": "https://i.ibb.co/sgbwk33/teacher2.jpg",
+//       "instructorName": "Malone Landry",
+//       "instructorEmail": "malonelandry@fiberox.com",
+//       "classPicture": "https://i.ibb.co/gmXW9Qd/class2.jpg",
+//       "className": "Color Me Happy",
+//       "availableSeats": "42",
+//       "price": "246"
+//     },
+//     {
+//       "instructorPicture": "https://i.ibb.co/JrwhCyh/teacher4.jpg",
+//       "instructorName": "Marietta Spears",
+//       "instructorEmail": "mariettaspears@fiberox.com",
+//       "classPicture": "https://i.ibb.co/rdNrrDQ/class3.jpg",
+//       "className": "The Fine Line",
+//       "availableSeats": "44",
+//       "price": "235"
+//     },
+//     {
+//       "instructorPicture": "https://i.ibb.co/b738cpZ/teacher5.jpg",
+//       "instructorName": "Shelton Branch",
+//       "instructorEmail": "sheltonbranch@fiberox.com",
+//       "classPicture": "https://i.ibb.co/FwV8bYp/class4.jpg",
+//       "className": "The Artful Touch",
+//       "availableSeats": "48",
+//       "price": "254"
+//     },
+//     {
+//       "instructorPicture": "https://i.ibb.co/C6sgYrr/tracher7.jpg",
+//       "instructorName": "Franklin Beasley",
+//       "instructorEmail": "franklinbeasley@fiberox.com",
+//       "classPicture": "https://i.ibb.co/xFkrLkz/class5.jpg",
+//       "className": "Fill Your Canvas",
+//       "availableSeats": "46",
+//       "price": "288"
+//     },
+//     {
+//       "instructorPicture": "https://i.ibb.co/LzrS4Yn/teacher8.jpg",
+//       "instructorName": "Briana Snider",
+//       "instructorEmail": "brianasnider@fiberox.com",
+//       "classPicture": "https://i.ibb.co/zFnv5Mc/class6.jpg",
+//       "className": " Artful Babe",
+//       "availableSeats": "50",
+//       "price": "232"
+//     }
+
+//   ]

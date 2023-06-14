@@ -34,7 +34,7 @@ const router = createBrowserRouter([
             {
                 path: '/subDolls/:subDollsId',
                 element: <PrivateRoute><DollDetails></DollDetails></PrivateRoute>,
-                loader: ({ params }) => fetch('http://localhost:5000//dolls')
+                loader: ({ params }) => fetch('http://localhost:5000/dolls')
             },
             {
                 path: '/login',
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             {
                 path: '/updateDollData/:id',
                 element: <UpdateDollData></UpdateDollData>,
-                loader: ({ params }) => fetch(`http://localhost:5000//dollsDetails/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/dollsDetails/${params.id}`)
             },
             {
                 path: '*',

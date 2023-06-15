@@ -3,11 +3,13 @@ import logo from '../../../assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 import './NavBar.css'
+import useCart from "../../../hook/useCart";
 
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     // console.log(user.photoURL)
+    const [cart] = useCart();
 
 
     const handleLogOut = () => {
@@ -21,6 +23,14 @@ const NavBar = () => {
         <li><Link to='/allDolls'>All Classes</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
+        <li><Link to='/dashboard/myCart'>
+            <button>
+                {/* <faShoppingBag></faShoppingBag> */}
+                <div >My Select Class <span className="badge badge-secondary">{cart?.length || 0}</span></div>
+            </button>
+            </Link>
+        </li>
+
         {/* <li><Link to='/addDoll'>Add A Doll</Link></li>
         <li><Link to='/myDoll'>My Doll</Link></li> */}
         {user?.email ? <>

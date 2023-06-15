@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import useTitle from "../../hook/useTitle";
+import Swal from "sweetalert2";
 const SignUp = () => {
     useTitle('SignUp');
 
@@ -14,20 +15,39 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
+        const confirmPassword = form.confirmPassword.value;
         const photo = form.photo.value;
-        console.log(name, email, password,  photo);
+        console.log(name, email, password, confirmPassword,  photo);
 
-        createUser(email, password)
+        // createUser(email, password)
+        //     .then(result => {
+        //         const createdUser = result.user;
+        //         // setSuccess('User Register successfully');
+        //         // navigate(from, { replace: true })
+        //         alert("User Register successfully")
+        //         console.log(createdUser);
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+
+        if (password == confirmPassword){
+            createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
                 // setSuccess('User Register successfully');
                 // navigate(from, { replace: true })
-                alert("User Register successfully")
+                // alert("User Register successfully")
+                Swal.fire('User Register successfully')
                 console.log(createdUser);
             })
             .catch(error => {
                 console.log(error);
             })
+        }
+        else{
+            alert("Your password and confirm password is not same.Please give correct password.")
+        }
 
     }
     return (
@@ -61,6 +81,15 @@ const SignUp = () => {
                                 </label>
                                 <input type="password" 
                                 name="password"
+                                placeholder="password" className="input input-bordered" />
+                                
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Confirm Password</span>
+                                </label>
+                                <input type="password" 
+                                name="confirmPassword"
                                 placeholder="password" className="input input-bordered" />
                                 
                             </div>

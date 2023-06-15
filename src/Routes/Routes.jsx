@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Layout.jsx/Main";
+import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import AllDolls from "../pages/AllDolls/AllDolls";
 import Blog from "../pages/Blog/Blog";
@@ -12,6 +12,8 @@ import MyDolls from "../pages/MyDolls/MyDolls";
 import AllMyDolls from "../pages/AllMyDolls/AllMyDolls";
 import PrivateRoute from "./PrivateRoute";
 import UpdateDollData from "../pages/UpdateDollData/updateDollData";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
 
 
 const router = createBrowserRouter([
@@ -62,13 +64,27 @@ const router = createBrowserRouter([
                 element: <UpdateDollData></UpdateDollData>,
                 loader: ({ params }) => fetch(`http://localhost:5000/dollsDetails/${params.id}`)
             },
-            {
-                path: '*',
-                element: <ErrorElement></ErrorElement>
-            }
+            // {
+            //     path: '*',
+            //     element: <ErrorElement></ErrorElement>
+            // }
 
-        ]
+        ],
     },
+    {
+        path: '*',
+        element: <ErrorElement></ErrorElement>
+    },
+    {
+        path:'dashboard',
+        element: <Dashboard></Dashboard>,
+        children:[
+            {
+                path: 'myCart',
+                element: <MyCart></MyCart>
+            }
+        ]
+    }
 ]);
 
 export default router;

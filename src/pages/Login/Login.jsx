@@ -5,6 +5,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 import useTitle from "../../hook/useTitle";
+import Swal from "sweetalert2";
 
 const Login = () => {
     useTitle('Login');
@@ -34,7 +35,8 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 
-                alert("User login successful")
+                // alert("User login successful")
+                Swal.fire('User login successful')
                 navigate(from, { replace: true })
                 // Navigate(from, { replace: true })
             })
@@ -52,7 +54,8 @@ const Login = () => {
                 console.log(LoggedInUser)
                 navigate(from, { replace: true })
                 setUser(LoggedInUser);
-                alert("User login successful")
+                // alert("User login successful")
+                Swal.fire('User login successful')
                 
             })
             .catch(error => {

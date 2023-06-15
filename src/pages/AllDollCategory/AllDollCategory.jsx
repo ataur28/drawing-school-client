@@ -89,7 +89,7 @@ const AllDollCategory = ({ subDolls }) => {
             </td>
             <th>
             {/* <Link to={`/subDolls/${_id}`}><button className='btn btn-primary'>View Details</button></Link> */}
-            <button onClick={handleAddToCard} className='btn btn-primary'>Select Button</button>
+            <button onClick={handleAddToCard} className='btn btn-primary'>Select Class</button>
             </th>
         </tr>
 

@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import AllDolls from "../pages/AllDolls/AllDolls";
-import Blog from "../pages/Blog/Blog";
 import ErrorElement from "../pages/ErrorElement/ErrorElement";
 import DollDetails from "../pages/Home/DollDetails/DollDetails";
 import Login from "../pages/Login/Login";
@@ -28,10 +27,6 @@ const router = createBrowserRouter([
             {
                 path: '/allDolls',
                 element: <AllDolls></AllDolls>,
-            },
-            {
-                path: '/blog',
-                element: <Blog></Blog>,
             },
             {
                 path: '/subDolls/:subDollsId',

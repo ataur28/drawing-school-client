@@ -1,7 +1,9 @@
 import Swal from "sweetalert2";
 import useCart from "../../../hook/useCart";
+import useTitle from "../../../hook/useTitle";
 
 const MyCart = () => {
+    useTitle('Selected Class');
     const [cart, refetch] = useCart();
     const total = cart.reduce((sum, item) => parseInt(item.price) + parseInt(sum), 0)
 

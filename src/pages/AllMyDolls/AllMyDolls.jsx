@@ -4,7 +4,7 @@ import UpdateDollData from "../UpdateDollData/updateDollData";
 
 
 const AllMyDolls = ({ myDolls, handleDelete }) => {
-    const { _id, classPicture, className, instructorName,availableSeats, price} = myDolls;
+    const { _id, classPicture, className, instructorName, availableSeats, price } = myDolls;
 
     // const handleUpdate = id =>{
     //     console.log(id);
@@ -37,11 +37,21 @@ const AllMyDolls = ({ myDolls, handleDelete }) => {
             <td>{availableSeats}</td>
             <td>${price}</td>
             <th>
-                <button onClick={() => handleDelete(_id)} className="btn btn-warning btn-xs">DELETE</button>
+                {/* <button onClick={() => handleDelete(_id)} className="btn btn-warning btn-xs">DELETE</button> */}
+                {/* <button>
+                    <select className="input input-bordered" name="category" id="cars">
+                        <option value="baby">Baby</option>
+                        <option value="barbie">Barbie</option>
+                        <option value="american">American</option>
+                    </select>
+                </button> */}
+                <button onClick={() => handleDelete(_id)} className="btn btn-warning btn-xs">Denied</button>
+                <button className="btn btn-warning btn-xs">Pending</button>
+                <button className="btn btn-warning btn-xs">Approved</button>
             </th>
             <th>
 
-                <Link to={`/updateDollData/${myDolls._id}`}><button   className="btn btn-secondary btn-xs">UPDATE</button></Link>
+                <Link to={`/updateDollData/${myDolls._id}`}><button className="btn btn-secondary btn-xs">UPDATE</button></Link>
 
                 {/* <button className="btn btn-secondary btn-xs">UPDATE</button> */}
                 {/* The button to open modal */}

@@ -4,7 +4,7 @@ import useTitle from "../../../hook/useTitle";
 
 
 const DollDetails = () => {
-    useTitle(' Doll Details');
+    useTitle(' Instructor Details');
     const { subDollsId } = useParams();
     // console.log(subDollsId);
     const [detail, setDetails] = useState(useLoaderData());

@@ -22,7 +22,7 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allDolls'>All Classes</Link></li>
         <li><Link to='/about'>About</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
+        {/* <li><Link to='/blog'>Blog</Link></li> */}
         <li><Link to='/dashboard/myCart'>
             <button>
                 {/* <faShoppingBag></faShoppingBag> */}
@@ -35,7 +35,7 @@ const NavBar = () => {
         <li><Link to='/myDoll'>My Doll</Link></li> */}
         {user?.email ? <>
             <li><Link to='/addDoll'>Add A Class</Link></li>
-            <li><Link to='/myDoll'>My Doll</Link></li>
+            <li><Link to='/myDoll'>My classes</Link></li>
             <li><button onClick={handleLogOut}>LogOut</button></li>
         </> : <li><Link to='/login'>Login</Link></li>
         }

@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import useTitle from "../../hook/useTitle";
+import Swal from "sweetalert2";
 
 
 const AddDoll = () => {
-    useTitle('Add A Doll');
+    useTitle('Add A Class');
 
     const { user } = useContext(AuthContext);
     const instructorEmail = user?.email
@@ -36,7 +37,8 @@ const AddDoll = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    alert('Add A Doll Successfully')
+                    // alert('Add A Doll Successfully')
+                    Swal.fire('Add A class Successfully')
                 }
             })
 

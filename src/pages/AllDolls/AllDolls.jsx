@@ -4,7 +4,7 @@ import useTitle from "../../hook/useTitle";
 // http://localhost:5000/
 
 const AllDolls = () => {
-    useTitle('All Dolls');
+    useTitle('All Classes');
     const [dolls, setDolls] = useState([]);
 
     useEffect(() => {

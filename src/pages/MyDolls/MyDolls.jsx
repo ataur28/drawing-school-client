@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import AllMyDolls from "../AllMyDolls/AllMyDolls";
 import useTitle from "../../hook/useTitle";
+import Swal from "sweetalert2";
 
 
 const MyDolls = () => {
@@ -37,7 +38,8 @@ const MyDolls = () => {
                 .then(data => {
                     console.log(data);
                     if(data.deletedCount>0){
-                        alert('Deleted Successful')
+                        // alert('Deleted Successful')
+                        Swal.fire('Deleted Successfully')
                         const remaining = dolls.filter(doll => doll._id !== id)
                         setDolls(remaining);
                     }

@@ -1,8 +1,11 @@
 // import { useContext } from "react";
 // import { AuthContext } from "../../provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../hook/useTitle";
+import Swal from "sweetalert2";
 
 const UpdateDollData = () => {
+    useTitle('Update');
     const loadedDoll = useLoaderData();
     // const { user } = useContext(AuthContext);
     // const emails = user?.email
@@ -31,7 +34,8 @@ const UpdateDollData = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount>0) {
-                    alert('Update Successfully')
+                    // alert('Update Successfully')
+                    Swal.fire('Update Successfully')
                 }
             })
 

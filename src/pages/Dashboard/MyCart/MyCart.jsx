@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useCart from "../../../hook/useCart";
 import useTitle from "../../../hook/useTitle";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
     useTitle('Selected Class');
@@ -40,12 +41,13 @@ const MyCart = () => {
 
     return (
         <div className="w-11/12">
-            <h2 className="text-3xl text-center p-8">My Selected Class</h2>
+            <h2 className="uppercase text-3xl mt-8 mb-8 text-center font-semibold">My Selected Class</h2>
             <div className="flex justify-between items-center">
                 <h3 className="text-2xl">Total Class : {cart.length}</h3>
                 <h3 className="text-2xl">Total price : ${total}</h3>
-                <button className="btn btn-secondary">Pay</button>
+                <Link to='/dashboard/payment'><button className="btn btn-secondary">Pay</button></Link>
             </div>
+            
             <div className="mb-5 mt-5">
 
 

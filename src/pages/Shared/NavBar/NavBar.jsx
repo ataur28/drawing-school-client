@@ -23,17 +23,18 @@ const NavBar = () => {
         <li><Link to='/allDolls'>All Classes</Link></li>
         <li><Link to='/about'>About</Link></li>
         {/* <li><Link to='/blog'>Blog</Link></li> */}
-        <li><Link to='/dashboard/myCart'>
-            <button>
-                {/* <faShoppingBag></faShoppingBag> */}
-                <div >My Select Class <span className="badge badge-secondary">{cart?.length || 0}</span></div>
-            </button>
-            </Link>
-        </li>
+        
 
         {/* <li><Link to='/addDoll'>Add A Doll</Link></li>
         <li><Link to='/myDoll'>My Doll</Link></li> */}
         {user?.email ? <>
+            <li><Link to='/dashboard/myCart'>
+                <button>
+                    {/* <faShoppingBag></faShoppingBag> */}
+                    <div >My Select Class <span className="badge badge-secondary">{cart?.length || 0}</span></div>
+                </button>
+            </Link>
+            </li>
             <li><Link to='/addDoll'>Add A Class</Link></li>
             <li><Link to='/myDoll'>My classes</Link></li>
             <li><button onClick={handleLogOut}>LogOut</button></li>
@@ -64,13 +65,13 @@ const NavBar = () => {
                 {/* <button className="btn btn-accent">Button</button> */}
 
                 {user && <div className='container'>
-                        <img className="h-14 w-14 rounded-full" src={user.photoURL} alt="" /> 
-                        <div className="overlay">
-                            <div className="text">{user.displayName}</div>
-                        </div>
-                    </div>}
+                    <img className="h-14 w-14 rounded-full" src={user.photoURL} alt="" />
+                    <div className="overlay">
+                        <div className="text">{user.displayName}</div>
+                    </div>
+                </div>}
 
-                   {/* <img className="h-14 w-14 rounded-full" src={user.photoURL} alt="" />  */}
+                {/* <img className="h-14 w-14 rounded-full" src={user.photoURL} alt="" />  */}
 
             </div>
         </div>

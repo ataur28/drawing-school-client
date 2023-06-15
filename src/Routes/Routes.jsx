@@ -13,6 +13,8 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateDollData from "../pages/UpdateDollData/updateDollData";
 import Dashboard from "../Layout/Dashboard";
 import MyCart from "../pages/Dashboard/MyCart/MyCart";
+import Payment from "../pages/Dashboard/Payment/Payment";
+import EnrolledClass from "../pages/Dashboard/EnrolledClass/EnrolledClass";
 
 
 const router = createBrowserRouter([
@@ -77,6 +79,14 @@ const router = createBrowserRouter([
             {
                 path: 'myCart',
                 element: <MyCart></MyCart>
+            },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
+            },
+            {
+                path: 'enroll',
+                element: <EnrolledClass></EnrolledClass>
             }
         ]
     }

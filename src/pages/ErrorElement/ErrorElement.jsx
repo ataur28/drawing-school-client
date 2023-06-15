@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import fof from '../../assets/fourOFour.jpg'
+import useTitle from '../../hook/useTitle';
 
 const ErrorElement = () => {
+    useTitle('Error');
 
     return (
         <div className='flex justify-center mt-6'>

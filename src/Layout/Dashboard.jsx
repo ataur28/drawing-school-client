@@ -18,8 +18,9 @@ const Dashboard = () => {
                     <h2 className="uppercase text-2xl text-center">Dashboard</h2>
                     {/* Sidebar content here */}
                     <li><Link to='/dashboard/myCart'>My Selected Classes</Link></li>
-                    <li><Link>My Enrolled Classes</Link></li>
-                    <li><Link>Payment History</Link></li>
+                    <li><Link to='/dashboard/enroll'>My Enrolled Classes</Link></li>
+                    <li><Link to='/dashboard/payment'>Payment</Link></li>
+                    <li><Link to='/dashboard/payHistory'>Payment History</Link></li>
                     <div className="divider"></div>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/allDolls'>All Classes</Link></li>

@@ -20,6 +20,13 @@ Usage Instructions:
 - user can find and  class
 - instructor added and update class
 
-.
+Use packages/ technology name
+- react
+- tanstack
+- daisyui
+- sweetalert
+- MongoBD
+- Js
+- firebase
 
 live site link: 

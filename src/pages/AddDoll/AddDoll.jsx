@@ -26,7 +26,7 @@ const AddDoll = () => {
         const doll = { className, classPicture, instructorName, instructorEmail, availableSeats, price }
         console.log(doll);
 
-        fetch('http://localhost:5000/dolls', {
+        fetch('https://dolls-drawing-school-server.vercel.app/dolls', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -23,7 +23,7 @@ const UpdateDollData = () => {
         const doll = {classPicture, className, instructorName,availableSeats, price}
         console.log(doll);
 
-        fetch(`http://localhost:5000/dollsDetails/${loadedDoll._id}`, {
+        fetch(`https://dolls-drawing-school-server.vercel.app/dollsDetails/${loadedDoll._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

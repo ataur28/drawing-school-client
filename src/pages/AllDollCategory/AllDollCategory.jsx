@@ -19,7 +19,7 @@ const AllDollCategory = ({ subDolls }) => {
         // console.log(item);
         if(user && user.email){
             const cardItem = {classID: _id, classPicture, className, instructorName, availableSeats, price, email: user.email }
-            fetch('http://localhost:5000/carts',{
+            fetch('https://dolls-drawing-school-server.vercel.app/carts',{
                 method:"POST",
                 headers:{
                     'content-type': 'application/json'

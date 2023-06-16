@@ -31,7 +31,7 @@ const NavBar = () => {
             <li><Link to='/dashboard/myCart'>
                 <button>
                     {/* <faShoppingBag></faShoppingBag> */}
-                    <div >My Select Class <span className="badge badge-secondary">{cart?.length || 0}</span></div>
+                    <div >Dashboard <span className="badge badge-secondary">{cart?.length || 0}</span></div>
                 </button>
             </Link>
             </li>

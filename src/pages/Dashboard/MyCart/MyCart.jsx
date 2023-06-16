@@ -45,7 +45,7 @@ const MyCart = () => {
             <div className="flex justify-between items-center">
                 <h3 className="text-2xl">Total Class : {cart.length}</h3>
                 <h3 className="text-2xl">Total price : ${total}</h3>
-                <Link to='/dashboard/payment'><button className="btn btn-secondary">Pay</button></Link>
+                
             </div>
             
             <div className="mb-5 mt-5">
@@ -106,8 +106,9 @@ const MyCart = () => {
                                     ${item.price}
                                 </td>
                                 <th>
+                                <Link to='/dashboard/payment'><button className="btn btn-secondary">Pay</button></Link>
                                     {/* <Link to={`/subDolls/${_id}`}><button className='btn btn-primary'>View Details</button></Link> */}
-                                    <button onClick={() => handleDelete(item)} className='btn btn-primary'>Delete</button>
+                                    <button onClick={() => handleDelete(item)} className='btn btn-primary ms-2'>Delete</button>
                                 </th>
                             </tr>)
                         }

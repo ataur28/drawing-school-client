@@ -28,5 +28,3 @@ Use packages/ technology name
 - MongoBD
 - Js
 - firebase
-
-live site link: https://doll-house-b55d9.web.app

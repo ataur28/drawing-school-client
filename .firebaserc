@@ -1,5 +1,8 @@
 {
-    "project": {
-        "default": "doll-house-b55d9"
-    }
+  "project": {
+    "default": "doll-house-b55d9"
+  },
+  "projects": {
+    "default": "drawing-school-39fb7"
+  }
 }

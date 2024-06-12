@@ -21,11 +21,11 @@ Usage Instructions:
 - instructor added and update class
 
 Use packages/ technology name
-- react
-- tanstack
-- daisyui
-- sweetalert
+- JavaScript
+- React
+- Tanstack
+- Daisyui
+- Sweetalert
 - MongoBD
-- Js
 - firebase
 Live Site: https://drawing-school-39fb7.web.app
